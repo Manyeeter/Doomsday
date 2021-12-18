@@ -1,30 +1,3 @@
-#Doomsday Algorithm
-#4/4 - 6/6 - 8/8 - 10/10 - 12/12
-#9/5 - 5/9 - 7/11 - 11/7
-#3/1 or 4/1 leap year
-#28/2 or 29/2 leap year
-#14/3 / Pi Day
-
-#All on the same day
-
-#Past Doomdsday - 1800 Pi day was a Friday
-#Past Doomsday - 1900 Pi day was a  Wednesday
-#Future Doomsday - 2000 Pi day was a Tuesday
-#Future Doomsday - 2001 Pi day was a Wednesday
-#Future Doomsday - 2002 Pi day was a Thursday
-#Future Doomsday - 2003 Pi day was a Friday
-#Future Doomsday - 2004 Pi day was a Saturday
-
-#Sunday = 0
-#Monday = 1
-#Tuesday = 2
-#Wednesday = 3
-#Thursday = 4
-#Friday = 5
-#Saturday = 6
-
-
-
 #_______________________Functions_______________________
 
 #####Num_to_day
