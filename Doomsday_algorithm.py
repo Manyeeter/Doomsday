@@ -63,11 +63,10 @@ dd = int(input("\nPlease enter a day (dd): "))
 mm = int(input("Please enter a month (mm): "))
 
 
-year_str = str(year)
-year_len = len(year_str)
-last_two = int(year_str[year_len - 2: year_len])
 
-first_two = int(year_str[:2])
+year_len = len(year)
+last_two = int(year[year_len - 2: year_len])
+first_two = int(year[:2])
 
 x = first_two % 4
 
