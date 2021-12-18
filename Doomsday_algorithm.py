@@ -47,6 +47,7 @@ def is_leap_year(year):
 #_______________________Variables_______________________
 doomsday = 0
 leap = False
+final_date = 0
 #_______________________________________________________
 
 
@@ -60,8 +61,9 @@ year_len = len(year)
 last_two = int(year[year_len - 2: year_len])
 first_two = int(year[:2])
 
-x = first_two % 4
 
+
+x = first_two % 4
 
 if x == 0:
     Anchor_day = 2
@@ -72,12 +74,18 @@ elif x == 2:
 else:
     Anchor_day = 3
 
+
+
+
 twelves_in_year = last_two // 12
 diff = int(last_two - (12*twelves_in_year))
 fours_in_diff = diff // 4
 result = twelves_in_year + diff + fours_in_diff + Anchor_day
 sevens_in_result = result % 7
 doomsday = sevens_in_result
+
+
+
 
 day = num_to_day(doomsday)
 
@@ -102,62 +110,39 @@ Day_of_jan1_str = num_to_day(Day_of_jan1)
 
 print("The day on the first of jan that year was",Day_of_jan1_str)
 
-final_date = 0
 
 
-if leap == True:
-    if mm == 12:
-        final_date = (Day_of_jan1 + 334 + dd) % 7
-    elif mm == 11:
-        final_date = (Day_of_jan1 + 304 + dd) % 7
-    elif mm == 10:
-        final_date = (Day_of_jan1 + 273 + dd) % 7
-    elif mm == 9:
-        final_date = (Day_of_jan1 + 243 + dd) % 7
-    elif mm == 8:
-        final_date = (Day_of_jan1 + 212 + dd) % 7
-    elif mm == 7:
-        final_date = (Day_of_jan1 + 181 + dd) % 7
-    elif mm == 6:
-        final_date = (Day_of_jan1 + 151 + dd) % 7
-    elif mm == 5:
-        final_date = (Day_of_jan1 + 120 + dd) % 7
-    elif mm == 4:
-        final_date = (Day_of_jan1 + 91 + dd) % 7
-    elif mm == 3:
-        final_date = (Day_of_jan1 + 61 + dd) % 7
-    elif mm == 2:
-        final_date = (Day_of_jan1 + 30 + dd) % 7
-    else:
-        final_date = (Day_of_jan1 + dd - 1) % 7
+if mm == 12:
+    final_date = (Day_of_jan1 + 333 + dd)
+elif mm == 11:
+    final_date = (Day_of_jan1 + 303 + dd)
+elif mm == 10:
+    final_date = (Day_of_jan1 + 272 + dd)
+elif mm == 9:
+    final_date = (Day_of_jan1 + 242 + dd)
+elif mm == 8:
+    final_date = (Day_of_jan1 + 211 + dd)
+elif mm == 7:
+    final_date = (Day_of_jan1 + 181 + dd)
+elif mm == 6:
+    final_date = (Day_of_jan1 + 150 + dd)
+elif mm == 5:
+    final_date = (Day_of_jan1 + 119 + dd)
+elif mm == 4:
+    final_date = (Day_of_jan1 + 90 + dd)
+elif mm == 3:
+    final_date = (Day_of_jan1 + 60 + dd)
+elif mm == 2:
+    final_date = (Day_of_jan1 + 30 + dd)
 else:
-    if mm == 12:
-        final_date = (Day_of_jan1 + 333 + dd) % 7
-    elif mm == 11:
-        final_date = (Day_of_jan1 + 303 + dd) % 7
-    elif mm == 10:
-        final_date = (Day_of_jan1 + 272 + dd) % 7
-    elif mm == 9:
-        final_date = (Day_of_jan1 + 242 + dd) % 7
-    elif mm == 8:
-        final_date = (Day_of_jan1 + 211 + dd) % 7
-    elif mm == 7:
-        final_date = (Day_of_jan1 + 181 + dd) % 7
-    elif mm == 6:
-        final_date = (Day_of_jan1 + 150 + dd) % 7
-    elif mm == 5:
-        final_date = (Day_of_jan1 + 119 + dd) % 7
-    elif mm == 4:
-        final_date = (Day_of_jan1 + 90 + dd) % 7
-    elif mm == 3:
-        final_date = (Day_of_jan1 + 60 + dd) % 7
-    elif mm == 2:
-        final_date = (Day_of_jan1 + 30 + dd) % 7
-    else:
-        final_date = (Day_of_jan1 + dd - 1) % 7
+    final_date = (Day_of_jan1 + dd - 1)
 
+if leap == True and mm > 2:
+    final_date += 1
+    final_day = final_date % 7
+else:
+    final_day = final_date % 7
 
-final_date_str = num_to_day(final_date)
+final_day_str = num_to_day(final_day)
 
-
-print(final_date_str)
+print(final_day_str)
