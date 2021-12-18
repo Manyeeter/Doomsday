@@ -89,7 +89,6 @@ doomsday = sevens_in_result
 
 day = num_to_day(doomsday)
 
-print("\n\nThe doomsday of that year was",day)
 
 leap = is_leap_year(year)
 
@@ -107,8 +106,6 @@ else:
 
 
 Day_of_jan1_str = num_to_day(Day_of_jan1)
-
-print("The day on the first of jan that year was",Day_of_jan1_str)
 
 
 
