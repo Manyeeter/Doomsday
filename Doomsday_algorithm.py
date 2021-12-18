@@ -26,6 +26,26 @@
 
 
 #_______________________Functions_______________________
+    #Num_to_day
+def num_to_day(num):
+    if num == 0:
+        day = "Sunday"
+    elif num == 1:
+        day = "Monday"
+    elif num == 2:
+        day = "Tuesday"
+    elif num == 3:
+        day = "Wednesday"
+    elif num == 4:
+        day = "Thursday"
+    elif num == 5:
+        day = "Friday"
+    else:
+        day = "Saturday"
+        
+    return(day)
+    ##########
+    
 
 #_______________________________________________________
 
@@ -68,20 +88,7 @@ result = twelves_in_year + diff + fours_in_diff + Anchor_day
 sevens_in_result = result % 7
 doomsday = sevens_in_result
 
-if doomsday == 0:
-    day = "Sunday"
-elif doomsday == 1:
-    day = "Monday"
-elif doomsday == 2:
-    day = "Tuesday"
-elif doomsday == 3:
-    day = "Wednesday"
-elif doomsday == 4:
-    day = "Thursday"
-elif doomsday == 5:
-    day = "Friday"
-else:
-    day = "Saturday"
+day = num_to_day(doomsday)
 
 print("\n\nThe doomsday of that year was",day)
 
@@ -115,21 +122,7 @@ else:
         Day_of_jan1 = ((doomsday+7)-2)
 
 
-
-if Day_of_jan1 == 0:
-    Day_of_jan1_str = "Sunday"
-elif Day_of_jan1 == 1:
-    Day_of_jan1_str = "Monday"
-elif Day_of_jan1 == 2:
-    Day_of_jan1_str = "Tuesday"
-elif Day_of_jan1 == 3:
-    Day_of_jan1_str = "Wednesday"
-elif Day_of_jan1 == 4:
-    Day_of_jan1_str = "Thursday"
-elif Day_of_jan1 == 5:
-    Day_of_jan1_str = "Friday"
-else:
-    Day_of_jan1_str = "Saturday"
+Day_of_jan1_str = num_to_day(Day_of_jan1)
 
 print("The day on the first of jan that year was",Day_of_jan1_str)
 
@@ -188,19 +181,7 @@ else:
         final_date = (Day_of_jan1 + dd - 1) % 7
 
 
-if final_date == 0:
-    final_date_str = "Sunday"
-elif final_date == 1:
-    final_date_str = "Monday"
-elif final_date == 2:
-    final_date_str = "Tuesday"
-elif final_date == 3:
-    final_date_str = "Wednesday"
-elif final_date == 4:
-    final_date_str = "Thursday"
-elif final_date == 5:
-    final_date_str = "Friday"
-else:
-    final_date_str = "Saturday"
+final_date_str = num_to_day(final_date)
+
 
 print(final_date_str)
