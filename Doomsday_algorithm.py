@@ -22,7 +22,7 @@
 #Thursday = 4
 #Friday = 5
 #Saturday = 6
-
+# This is a new test comment
 
 #_______________________Variables_______________________
 doomsday = 0
