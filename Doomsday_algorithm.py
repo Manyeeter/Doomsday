@@ -26,7 +26,8 @@
 
 
 #_______________________Functions_______________________
-    #Num_to_day
+
+#####Num_to_day
 def num_to_day(num):
     if num == 0:
         day = "Sunday"
@@ -44,8 +45,26 @@ def num_to_day(num):
         day = "Saturday"
         
     return(day)
-    ##########
-    
+##############
+
+
+#####Leap year
+def is_leap_year(year):
+    year = int(year)
+    if (year % 4) == 0:
+        if (year % 100) == 0:
+            if (year % 400) == 0:
+                print(year,"is a leap year")
+                return True
+            else:
+                print(year,"is not a leap year")
+        else:
+            print(year,"is a leap year")
+            return True
+    else:
+        print(year,"is not a leap year")
+##############
+
 
 #_______________________________________________________
 
@@ -90,21 +109,6 @@ doomsday = sevens_in_result
 day = num_to_day(doomsday)
 
 print("\n\nThe doomsday of that year was",day)
-
-def is_leap_year(year):
-    year = int(year)
-    if (year % 4) == 0:
-        if (year % 100) == 0:
-            if (year % 400) == 0:
-                print(year,"is a leap year")
-                return True
-            else:
-                print(year,"is not a leap year")
-        else:
-            print(year,"is a leap year")
-            return True
-    else:
-        print(year,"is not a leap year")
 
 leap = is_leap_year(year)
 
