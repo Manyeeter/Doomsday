@@ -1,6 +1,6 @@
 #_______________________Functions_______________________
 
-#####Num_to_day
+#####Num_to_day##############
 def num_to_day(num):
     if num == 0:
         day = "Sunday"
@@ -18,26 +18,41 @@ def num_to_day(num):
         day = "Saturday"
         
     return(day)
-##############
+############################
 
 
-#####Leap year
+#####Leap year##############
 def is_leap_year(year):
     year = int(year)
     if (year % 4) == 0:
         if (year % 100) == 0:
             if (year % 400) == 0:
-                print(year,"is a leap year")
+                print("\n",year,"is a leap year")
                 return True
             else:
-                print(year,"is not a leap year")
+                print("\n",year,"is not a leap year")
         else:
-            print(year,"is a leap year")
+            print("\n",year,"is a leap year")
             return True
     else:
-        print(year,"is not a leap year")
-##############
+        print("\n",year,"is not a leap year")
+############################
 
+
+#####Jan first calculation##############
+def jan_1st_date(leap,doomsday):
+    if leap == True:
+        if doomsday > 3:
+            Day_of_jan1 = doomsday - 3
+        else:
+            Day_of_jan1 = ((doomsday+7)-3)
+    else:
+        if doomsday > 1:
+            Day_of_jan1 = doomsday - 2
+        else:
+            Day_of_jan1 = ((doomsday+7)-2)
+    return(Day_of_jan1)
+############################
 
 #_______________________________________________________
 
@@ -88,23 +103,8 @@ doomsday = sevens_in_result
 
 
 day = num_to_day(doomsday)
-
-
 leap = is_leap_year(year)
-
-# The algorithm below will find the day on the first of jan in that year
-if leap == True:
-    if doomsday > 3:
-        Day_of_jan1 = doomsday - 3
-    else:
-        Day_of_jan1 = ((doomsday+7)-3)
-else:
-    if doomsday > 1:
-        Day_of_jan1 = doomsday - 2
-    else:
-        Day_of_jan1 = ((doomsday+7)-2)
-
-
+Day_of_jan1 = jan_1st_date(leap,doomsday)
 Day_of_jan1_str = num_to_day(Day_of_jan1)
 
 
@@ -142,4 +142,4 @@ else:
 
 final_day_str = num_to_day(final_day)
 
-print(final_day_str)
+print("\nThe day on that date is:",final_day_str)
