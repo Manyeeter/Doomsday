@@ -1,4 +1,4 @@
-Items = int(input("Please enter the total number of items: "))
+Items = int(input("\n\n\nPlease enter the total number of items: "))
 
 Big_box = (Items - (Items % 10)) / 10
 Big_box = int(Big_box)
