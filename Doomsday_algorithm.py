@@ -15,8 +15,7 @@ def num_to_day(num):
     elif num == 5:
         day = "Friday"
     else:
-        day = "Saturday"
-        
+        day = "Saturday" 
     return(day)
 ############################
 
@@ -27,15 +26,15 @@ def is_leap_year(year):
     if (year % 4) == 0:
         if (year % 100) == 0:
             if (year % 400) == 0:
-                print("\n",year,"is a leap year")
+                print(year,"is a leap year")
                 return True
             else:
-                print("\n",year,"is not a leap year")
+                print(year,"is not a leap year")
         else:
-            print("\n",year,"is a leap year")
+            print(year,"is a leap year")
             return True
     else:
-        print("\n",year,"is not a leap year")
+        print(year,"is not a leap year")
 ############################
 
 
@@ -103,6 +102,7 @@ doomsday = sevens_in_result
 
 
 day = num_to_day(doomsday)
+print("")
 leap = is_leap_year(year)
 Day_of_jan1 = jan_1st_date(leap,doomsday)
 Day_of_jan1_str = num_to_day(Day_of_jan1)
