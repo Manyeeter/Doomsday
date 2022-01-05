@@ -2,21 +2,8 @@
 
 #####Num_to_day##############
 def num_to_day(num):
-    if num == 0:
-        day = "Sunday"
-    elif num == 1:
-        day = "Monday"
-    elif num == 2:
-        day = "Tuesday"
-    elif num == 3:
-        day = "Wednesday"
-    elif num == 4:
-        day = "Thursday"
-    elif num == 5:
-        day = "Friday"
-    else:
-        day = "Saturday" 
-    return(day)
+    day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    return(day[num])
 ############################
 
 
@@ -133,6 +120,7 @@ elif mm == 2:
     final_date = (Day_of_jan1 + 30 + dd)
 else:
     final_date = (Day_of_jan1 + dd - 1)
+
 
 if leap == True and mm > 2:
     final_date += 1
